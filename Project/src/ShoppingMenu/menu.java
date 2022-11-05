@@ -75,6 +75,8 @@ public class menu extends javax.swing.JFrame {
             public void run() {
                 new menu().setVisible(true);
                 System.out.println("gide is here");
+                System.out.println("hello");
+                System.out.println("hello");
             }
         });
     }
