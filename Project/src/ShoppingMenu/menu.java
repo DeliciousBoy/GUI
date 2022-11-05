@@ -89,6 +89,7 @@ public class menu extends javax.swing.JFrame {
                 new menu().setVisible(true);
                 System.out.println("gide is here");
                 System.out.println("it say hello");
+                System.out.println("Test Test");
             }
         });
     }
