@@ -4,6 +4,8 @@
  */
 package Login;
 
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +19,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     public static String name;
     public NewJFrame1() {
         initComponents();
+        SetIcon();
 
     }
 
@@ -39,7 +42,14 @@ public class NewJFrame1 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Shiba Inu");
+        setTitle("Minimart Shop");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setIconImages(null);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowIconified(java.awt.event.WindowEvent evt) {
+                formWindowIconified(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Welcome to minimart");
@@ -142,9 +152,21 @@ public class NewJFrame1 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+      private void SetIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Icons8-themes-30.png")));
+    }
+      
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
       jTextField1.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void formWindowIconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowIconified
+
+        //Icon = new ImageIcon("C:\\Users\\acer\\Downloads\\Shop.png");
+        //setIconImage(Icon.getImage());
+        //C:\\Users\\acer\\Downloads\\Shop.png
+        
+    }//GEN-LAST:event_formWindowIconified
 
     /**
      * @param args the command line arguments
@@ -191,4 +213,5 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
 }
