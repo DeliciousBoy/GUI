@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
+import static Login.NewJFrame1.name;
 /**
  *
  * @author acer
@@ -69,7 +70,7 @@ public class NewJFrame2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        //jLabel3.setText(name);
+        jLabel3.setText(name);
     }//GEN-LAST:event_formWindowActivated
 
     /**

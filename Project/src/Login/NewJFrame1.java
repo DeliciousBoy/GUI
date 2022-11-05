@@ -12,10 +12,10 @@ import javax.swing.JOptionPane;
  * @author acer
  */
 public class NewJFrame1 extends javax.swing.JFrame {
-
     /**
      * Creates new form NewJFrame1
      */
+    public static String name;
     public NewJFrame1() {
         initComponents();
     }
@@ -98,8 +98,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String name = jTextField1.getText();
-        JButton button = (JButton) evt.getSource();
+        name = jTextField1.getText();
         JOptionPane.showMessageDialog(null, "You are login as " + name);
         NewJFrame2 jf2 = new NewJFrame2();
         jf2.show();
