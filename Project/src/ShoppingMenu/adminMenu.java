@@ -73,6 +73,7 @@ public class adminMenu extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new adminMenu().setVisible(true);
+                System.out.println("gide is here");
             }
         });
     }
