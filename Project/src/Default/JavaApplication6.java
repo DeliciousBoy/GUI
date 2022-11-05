@@ -17,4 +17,13 @@ public class JavaApplication6 {
         // TODO code application logic here
     }
     
+    
+    
+}
+
+class test{
+    
+    public static void main(String[] args) {
+        System.out.println("dad");
+    }
 }
