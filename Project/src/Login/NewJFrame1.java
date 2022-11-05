@@ -8,7 +8,8 @@ import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import student.NewJFrame2;
+//import student.
+//import NewJFrame2;
 
 /**
  *
