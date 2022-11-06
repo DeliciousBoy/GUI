@@ -240,6 +240,9 @@ public class PT extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         //Pay here
+        Bill bill = new Bill();
+        bill.show();
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
