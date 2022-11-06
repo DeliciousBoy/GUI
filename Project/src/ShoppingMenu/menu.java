@@ -35,9 +35,9 @@ public class menu extends javax.swing.JFrame {
         tab3 = new javax.swing.JPanel();
         Shopping2 = new javax.swing.JLabel();
         itemSelect = new javax.swing.JPanel();
+        shoppingPanel = new javax.swing.JPanel();
         tab2Panel = new javax.swing.JPanel();
         tab3Panel = new javax.swing.JPanel();
-        shoppingPanel = new javax.swing.JPanel();
 
         jPanel2.setBackground(new java.awt.Color(255, 0, 102));
 
@@ -53,6 +53,7 @@ public class menu extends javax.swing.JFrame {
         );
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setPreferredSize(new java.awt.Dimension(795, 425));
 
         menuSelect.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -159,33 +160,7 @@ public class menu extends javax.swing.JFrame {
         );
 
         itemSelect.setBackground(new java.awt.Color(102, 153, 0));
-
-        tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
-
-        javax.swing.GroupLayout tab2PanelLayout = new javax.swing.GroupLayout(tab2Panel);
-        tab2Panel.setLayout(tab2PanelLayout);
-        tab2PanelLayout.setHorizontalGroup(
-            tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 584, Short.MAX_VALUE)
-        );
-        tab2PanelLayout.setVerticalGroup(
-            tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 413, Short.MAX_VALUE)
-        );
-
-        tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
-        tab3Panel.setPreferredSize(new java.awt.Dimension(500, 425));
-
-        javax.swing.GroupLayout tab3PanelLayout = new javax.swing.GroupLayout(tab3Panel);
-        tab3Panel.setLayout(tab3PanelLayout);
-        tab3PanelLayout.setHorizontalGroup(
-            tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 584, Short.MAX_VALUE)
-        );
-        tab3PanelLayout.setVerticalGroup(
-            tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        itemSelect.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         shoppingPanel.setBackground(new java.awt.Color(255, 153, 153));
         shoppingPanel.setPreferredSize(new java.awt.Dimension(596, 425));
@@ -195,43 +170,46 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setLayout(shoppingPanelLayout);
         shoppingPanelLayout.setHorizontalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         shoppingPanelLayout.setVerticalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 425, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout itemSelectLayout = new javax.swing.GroupLayout(itemSelect);
-        itemSelect.setLayout(itemSelectLayout);
-        itemSelectLayout.setHorizontalGroup(
-            itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(itemSelectLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tab2Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(itemSelectLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
-                    .addContainerGap()))
+        itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
+
+        tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
+        tab2Panel.setPreferredSize(new java.awt.Dimension(500, 425));
+
+        javax.swing.GroupLayout tab2PanelLayout = new javax.swing.GroupLayout(tab2Panel);
+        tab2Panel.setLayout(tab2PanelLayout);
+        tab2PanelLayout.setHorizontalGroup(
+            tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
-        itemSelectLayout.setVerticalGroup(
-            itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(itemSelectLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tab2Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(itemSelectLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
-                    .addContainerGap()))
+        tab2PanelLayout.setVerticalGroup(
+            tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 425, Short.MAX_VALUE)
         );
+
+        itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
+
+        tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
+        tab3Panel.setPreferredSize(new java.awt.Dimension(500, 425));
+
+        javax.swing.GroupLayout tab3PanelLayout = new javax.swing.GroupLayout(tab3Panel);
+        tab3Panel.setLayout(tab3PanelLayout);
+        tab3PanelLayout.setHorizontalGroup(
+            tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        tab3PanelLayout.setVerticalGroup(
+            tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -239,7 +217,7 @@ public class menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(menuSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(itemSelect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -256,9 +234,7 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setVisible(true);
         tab2Panel.setVisible(false);
         tab3Panel.setVisible(false);
-//        tab1.setBackground(Color.White);
-//        tab2.setBackground(new Color(102,204,0));
-        
+
     }//GEN-LAST:event_tab1MouseClicked
 
     private void tab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseClicked
