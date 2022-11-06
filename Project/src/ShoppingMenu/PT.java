@@ -127,7 +127,7 @@ public class PT extends javax.swing.JFrame {
 
         jLabel1.setText("Total Price : ");
 
-        lb_sumprice.setText("jLabel2");
+        lb_sumprice.setText("0");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -254,7 +254,15 @@ public class PT extends javax.swing.JFrame {
         }
         );
         
-        
+//        JOptionPane.showMessageDialog(null, "Payment successful! ");
+        //Show Total price on label
+        int NumRow = jTable1.getRowCount();
+        double Total = 0;
+        for(int i = 0; i < NumRow; i++){
+        double Value = Double.valueOf(jTable1.getValueAt(i,1).toString());
+        Total += Value;
+        lb_sumprice.setText(Double.toString(Total));
+        }
     }//GEN-LAST:event_addActionPerformed
 
     /**
