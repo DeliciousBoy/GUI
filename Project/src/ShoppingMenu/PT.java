@@ -4,6 +4,8 @@
  */
 package ShoppingMenu;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ASUS
@@ -14,6 +16,7 @@ public class PT extends javax.swing.JFrame {
      * Creates new form PT
      */
     int item;
+    public static double sum_price = 0;
     public PT() {
         initComponents();
     }
@@ -40,6 +43,8 @@ public class PT extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         add = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        lb_sumprice = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -49,10 +54,7 @@ public class PT extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "item", "prices", "Qty"
@@ -122,6 +124,10 @@ public class PT extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Total Price : ");
+
+        lb_sumprice.setText("jLabel2");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -153,6 +159,12 @@ public class PT extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2)
                         .addGap(136, 136, 136))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(lb_sumprice, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +173,11 @@ public class PT extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lb_sumprice))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,7 +237,13 @@ public class PT extends javax.swing.JFrame {
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         
         // Add item to Cart here
-        
+//        String NameItem = jTextPane1.getText();
+        AddRowToJTable(new Object[]{
+                                                        jTable2.getModel().getValueAt(selected, 0),
+                                                        jTable2.getModel().getValueAt(selected, 1),
+                                                        lb.getText()
+        }
+        );
     }//GEN-LAST:event_addActionPerformed
 
     /**
@@ -259,19 +281,33 @@ public class PT extends javax.swing.JFrame {
             }
         });
     }
+    public static void AddRowToJTable(Object[] dataRow){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.addRow(dataRow);
+    }
+    public static void sumPrice(){
+        sum_price = 0;
+        for(int i = 0; i< jTable1.getRowCount();i++){
+            sum_price = sum_price + Double.parseDouble(jTable1.getValueAt(i, 1).toString());
+        }
+//        lb_sumprice.setText(String.valueOf(sum_price));
+        lb_sumprice.setText(String.valueOf(sum_price));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private static javax.swing.JTable jTable1;
+    private static javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel lb;
+    public static javax.swing.JLabel lb_sumprice;
     private javax.swing.JButton minus;
     private javax.swing.JButton plus;
     // End of variables declaration//GEN-END:variables
