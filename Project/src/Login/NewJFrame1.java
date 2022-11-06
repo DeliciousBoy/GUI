@@ -7,10 +7,10 @@ package Login;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import javax.swing.JTextField;
-=======
->>>>>>> 3bf19402ff5030faa7aadaafa32e3d406d8e0045
+//=======
+//>>>>>>> 3bf19402ff5030faa7aadaafa32e3d406d8e0045
 
 /**
  *

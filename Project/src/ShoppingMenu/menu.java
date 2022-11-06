@@ -162,17 +162,18 @@ public class menu extends javax.swing.JFrame {
         itemSelect.setBackground(new java.awt.Color(102, 153, 0));
 
         shoppingPanel.setBackground(new java.awt.Color(255, 153, 153));
-        shoppingPanel.setPreferredSize(new java.awt.Dimension(500, 425));
+        shoppingPanel.setPreferredSize(new java.awt.Dimension(596, 425));
+        shoppingPanel.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout shoppingPanelLayout = new javax.swing.GroupLayout(shoppingPanel);
         shoppingPanel.setLayout(shoppingPanelLayout);
         shoppingPanelLayout.setHorizontalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+            .addGap(0, 596, Short.MAX_VALUE)
         );
         shoppingPanelLayout.setVerticalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGap(0, 425, Short.MAX_VALUE)
         );
 
         tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
@@ -181,21 +182,21 @@ public class menu extends javax.swing.JFrame {
         tab2Panel.setLayout(tab2PanelLayout);
         tab2PanelLayout.setHorizontalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGap(0, 584, Short.MAX_VALUE)
         );
         tab2PanelLayout.setVerticalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGap(0, 413, Short.MAX_VALUE)
         );
 
         tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
-        tab3Panel.setPreferredSize(new java.awt.Dimension(596, 425));
+        tab3Panel.setPreferredSize(new java.awt.Dimension(500, 425));
 
         javax.swing.GroupLayout tab3PanelLayout = new javax.swing.GroupLayout(tab3Panel);
         tab3Panel.setLayout(tab3PanelLayout);
         tab3PanelLayout.setHorizontalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGap(0, 584, Short.MAX_VALUE)
         );
         tab3PanelLayout.setVerticalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +207,7 @@ public class menu extends javax.swing.JFrame {
         itemSelect.setLayout(itemSelectLayout);
         itemSelectLayout.setHorizontalGroup(
             itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
+            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(itemSelectLayout.createSequentialGroup()
                     .addContainerGap()
@@ -215,12 +216,12 @@ public class menu extends javax.swing.JFrame {
             .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(itemSelectLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         itemSelectLayout.setVerticalGroup(
             itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE)
+            .addComponent(shoppingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(itemSelectLayout.createSequentialGroup()
                     .addContainerGap()
@@ -229,7 +230,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(itemSelectLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(itemSelectLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tab3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
