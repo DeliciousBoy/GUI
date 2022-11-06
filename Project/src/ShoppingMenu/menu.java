@@ -174,10 +174,10 @@ public class menu extends javax.swing.JFrame {
         );
         shoppingPanelLayout.setVerticalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
 
-        itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
+        itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, 450));
 
         tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
         tab2Panel.setPreferredSize(new java.awt.Dimension(500, 425));
@@ -190,10 +190,10 @@ public class menu extends javax.swing.JFrame {
         );
         tab2PanelLayout.setVerticalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
 
-        itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
+        itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, 450));
 
         tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
         tab3Panel.setPreferredSize(new java.awt.Dimension(500, 425));
@@ -209,7 +209,7 @@ public class menu extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
+        itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
