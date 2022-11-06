@@ -17,6 +17,7 @@ public class PT extends javax.swing.JFrame {
      */
     int item;
     public static double sum_price = 0;
+
     public PT() {
         initComponents();
     }
@@ -218,16 +219,23 @@ public class PT extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_minusActionPerformed
-    
-    
+
     int selected;
+    int sumPricePerItem;
+
+    private int sumPrice() {
+        sumPricePerItem = 0;
+        sumPricePerItem = item * Integer.parseInt(jTable2.getValueAt(selected, 1).toString());
+        return sumPricePerItem;
+
+    }
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-      
+
         // Display item 
         selected = jTable2.getSelectedRow();
         String s = String.valueOf(jTable2.getValueAt(selected, 0));
         jTextPane1.setText(s);
-        
+
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -235,15 +243,18 @@ public class PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        
+
         // Add item to Cart here
 //        String NameItem = jTextPane1.getText();
         AddRowToJTable(new Object[]{
-                                                        jTable2.getModel().getValueAt(selected, 0),
-                                                        jTable2.getModel().getValueAt(selected, 1),
-                                                        lb.getText()
+            jTable2.getModel().getValueAt(selected, 0),
+//            jTable2.getModel().getValueAt(selected, 1),
+            sumPrice(),
+            lb.getText()
         }
         );
+        
+        
     }//GEN-LAST:event_addActionPerformed
 
     /**
@@ -281,18 +292,12 @@ public class PT extends javax.swing.JFrame {
             }
         });
     }
-    public static void AddRowToJTable(Object[] dataRow){
+
+    public static void AddRowToJTable(Object[] dataRow) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.addRow(dataRow);
     }
-    public static void sumPrice(){
-        sum_price = 0;
-        for(int i = 0; i< jTable1.getRowCount();i++){
-            sum_price = sum_price + Double.parseDouble(jTable1.getValueAt(i, 1).toString());
-        }
-//        lb_sumprice.setText(String.valueOf(sum_price));
-        lb_sumprice.setText(String.valueOf(sum_price));
-    }
+//  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
