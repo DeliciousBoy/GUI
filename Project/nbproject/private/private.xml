@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/program/GUI/Project/src/ShoppingMenu/menu.java</file>
             <file>file:/D:/program/GUI/Project/src/ShoppingMenu/Card.java</file>
+=======
+            <file>file:/C:/Users/asus/Documents/GitHub/GUI/GUI/Project/src/Login/NewJFrame1.java</file>
+            <file>file:/C:/Users/asus/Documents/GitHub/GUI/GUI/Project/src/Login/Test.java</file>
+            <file>file:/C:/Users/asus/Documents/GitHub/GUI/GUI/Project/src/Login/Test2.java</file>
+            <file>file:/C:/Users/asus/Documents/GitHub/GUI/GUI/Project/src/Login/NewJFrame2.java</file>
+>>>>>>> 3bf19402ff5030faa7aadaafa32e3d406d8e0045
         </group>
     </open-files>
 </project-private>
