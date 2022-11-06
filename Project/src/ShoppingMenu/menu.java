@@ -53,7 +53,6 @@ public class menu extends javax.swing.JFrame {
         );
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(795, 425));
 
         menuSelect.setBackground(new java.awt.Color(0, 153, 51));
 
