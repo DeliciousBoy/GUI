@@ -200,11 +200,18 @@ public class PT extends javax.swing.JFrame {
             item--;
             lb.setText(Integer.toString(item));
         }
-
+        
     }//GEN-LAST:event_minusActionPerformed
     
     
     int selected;
+    int sumPricePerItem;
+    private int sumPrice(){
+        sumPricePerItem = 0;
+        sumPricePerItem = item * Integer.parseInt(jTable2.getValueAt(selected, 1).toString());
+        return sumPricePerItem;
+        
+    }
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
       
         // Display item 
@@ -219,8 +226,8 @@ public class PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        
-        // Add item to Cart here
+        System.out.println("total" + sumPrice());
+        // Add item to Cart here 
         
     }//GEN-LAST:event_addActionPerformed
 

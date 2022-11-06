@@ -252,6 +252,8 @@ public class JF1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        jLabel8.setText(Double.toString(tot));
         num = num + 1;
         String output = String.valueOf(num);
         jTextField_num.setText(output);
@@ -267,6 +269,10 @@ public class JF1 extends javax.swing.JFrame {
         jLabel8.setText(Double.toString(tot));
 
         System.out.println("p : " + tot);
+        
+        
+        
+//        
 
         //jLabel1.setText(output);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -310,7 +316,7 @@ public class JF1 extends javax.swing.JFrame {
         // TODO add your handling code here:
         double Alltot = 0;
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
-
+        
 //        int Total = 0;
 //        String n = jTextField_num.getText();
 //         int numrow = jTable1.getRowCount();
