@@ -176,7 +176,6 @@ public class menu extends javax.swing.JFrame {
             .addGap(0, 430, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
 <<<<<<< Updated upstream
         itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
 =======
@@ -185,30 +184,19 @@ public class menu extends javax.swing.JFrame {
 
         tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
         tab2Panel.setPreferredSize(new java.awt.Dimension(596, 425));
-=======
-        itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
-
-        tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
-        tab2Panel.setPreferredSize(new java.awt.Dimension(500, 425));
->>>>>>> main
 
         javax.swing.GroupLayout tab2PanelLayout = new javax.swing.GroupLayout(tab2Panel);
         tab2Panel.setLayout(tab2PanelLayout);
         tab2PanelLayout.setHorizontalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
 <<<<<<< Updated upstream
             .addGap(0, 596, Short.MAX_VALUE)
-=======
-            .addGap(0, 600, Short.MAX_VALUE)
->>>>>>> main
         );
         tab2PanelLayout.setVerticalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 425, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
         itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
 =======
             .addGap(0, 600, Short.MAX_VALUE)
@@ -220,9 +208,6 @@ public class menu extends javax.swing.JFrame {
 
         itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 430));
 >>>>>>> Stashed changes
-=======
-        itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
->>>>>>> main
 
         tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
         tab3Panel.setPreferredSize(new java.awt.Dimension(596, 425));
@@ -231,30 +216,22 @@ public class menu extends javax.swing.JFrame {
         tab3Panel.setLayout(tab3PanelLayout);
         tab3PanelLayout.setHorizontalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
 <<<<<<< Updated upstream
             .addGap(0, 596, Short.MAX_VALUE)
 =======
             .addGap(0, 600, Short.MAX_VALUE)
 >>>>>>> Stashed changes
-=======
-            .addGap(0, 600, Short.MAX_VALUE)
->>>>>>> main
         );
         tab3PanelLayout.setVerticalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 430, Short.MAX_VALUE)
         );
 
-<<<<<<< HEAD
 <<<<<<< Updated upstream
         itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
 =======
         itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, 430));
 >>>>>>> Stashed changes
-=======
-        itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, -1));
->>>>>>> main
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -262,7 +239,7 @@ public class menu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(menuSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(itemSelect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -279,7 +256,6 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setVisible(true);
         tab2Panel.setVisible(false);
         tab3Panel.setVisible(false);
-        System.out.println("hi");
     }//GEN-LAST:event_tab1MouseClicked
 
     private void tab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab2MouseClicked
