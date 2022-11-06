@@ -271,7 +271,6 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setVisible(false);
         tab2Panel.setVisible(false);
         tab3Panel.setVisible(true);
-        System.out.println("test");
     }//GEN-LAST:event_tab3MouseClicked
 
     /**
