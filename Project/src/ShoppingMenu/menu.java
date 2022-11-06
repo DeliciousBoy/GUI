@@ -35,9 +35,9 @@ public class menu extends javax.swing.JFrame {
         tab3 = new javax.swing.JPanel();
         Shopping2 = new javax.swing.JLabel();
         itemSelect = new javax.swing.JPanel();
-        shoppingPanel = new javax.swing.JPanel();
         tab2Panel = new javax.swing.JPanel();
         tab3Panel = new javax.swing.JPanel();
+        shoppingPanel = new javax.swing.JPanel();
 
         jPanel2.setBackground(new java.awt.Color(255, 0, 102));
 
@@ -53,7 +53,6 @@ public class menu extends javax.swing.JFrame {
         );
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(795, 425));
 
         menuSelect.setBackground(new java.awt.Color(0, 153, 51));
 
@@ -161,21 +160,6 @@ public class menu extends javax.swing.JFrame {
 
         itemSelect.setBackground(new java.awt.Color(102, 153, 0));
 
-        shoppingPanel.setBackground(new java.awt.Color(255, 153, 153));
-        shoppingPanel.setPreferredSize(new java.awt.Dimension(596, 425));
-        shoppingPanel.setRequestFocusEnabled(false);
-
-        javax.swing.GroupLayout shoppingPanelLayout = new javax.swing.GroupLayout(shoppingPanel);
-        shoppingPanel.setLayout(shoppingPanelLayout);
-        shoppingPanelLayout.setHorizontalGroup(
-            shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
-        shoppingPanelLayout.setVerticalGroup(
-            shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
-        );
-
         tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout tab2PanelLayout = new javax.swing.GroupLayout(tab2Panel);
@@ -201,6 +185,21 @@ public class menu extends javax.swing.JFrame {
         tab3PanelLayout.setVerticalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        shoppingPanel.setBackground(new java.awt.Color(255, 153, 153));
+        shoppingPanel.setPreferredSize(new java.awt.Dimension(596, 425));
+        shoppingPanel.setRequestFocusEnabled(false);
+
+        javax.swing.GroupLayout shoppingPanelLayout = new javax.swing.GroupLayout(shoppingPanel);
+        shoppingPanel.setLayout(shoppingPanelLayout);
+        shoppingPanelLayout.setHorizontalGroup(
+            shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+        shoppingPanelLayout.setVerticalGroup(
+            shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 425, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout itemSelectLayout = new javax.swing.GroupLayout(itemSelect);
@@ -271,7 +270,6 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setVisible(false);
         tab2Panel.setVisible(false);
         tab3Panel.setVisible(true);
-        System.out.println("test");
     }//GEN-LAST:event_tab3MouseClicked
 
     /**
