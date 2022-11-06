@@ -237,19 +237,23 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< Updated upstream
               <AbsoluteConstraints x="0" y="-1" width="-1" height="-1"/>
+=======
+              <AbsoluteConstraints x="0" y="0" width="600" height="430"/>
+>>>>>>> Stashed changes
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="596" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="425" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -265,19 +269,31 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< Updated upstream
               <AbsoluteConstraints x="0" y="-1" width="-1" height="-1"/>
+=======
+              <AbsoluteConstraints x="0" y="0" width="600" height="430"/>
+>>>>>>> Stashed changes
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< Updated upstream
                   <EmptySpace min="0" pref="596" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="0" pref="600" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< Updated upstream
                   <EmptySpace min="0" pref="425" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
               </Group>
             </DimensionLayout>
           </Layout>
@@ -293,19 +309,27 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+<<<<<<< Updated upstream
               <AbsoluteConstraints x="0" y="-1" width="-1" height="-1"/>
+=======
+              <AbsoluteConstraints x="0" y="-1" width="600" height="430"/>
+>>>>>>> Stashed changes
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< Updated upstream
                   <EmptySpace min="0" pref="596" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="0" pref="600" max="32767" attributes="0"/>
+>>>>>>> Stashed changes
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

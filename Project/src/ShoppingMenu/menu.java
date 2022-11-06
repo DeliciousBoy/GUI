@@ -169,14 +169,18 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setLayout(shoppingPanelLayout);
         shoppingPanelLayout.setHorizontalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         shoppingPanelLayout.setVerticalGroup(
             shoppingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
 
+<<<<<<< Updated upstream
         itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
+=======
+        itemSelect.add(shoppingPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 430));
+>>>>>>> Stashed changes
 
         tab2Panel.setBackground(new java.awt.Color(0, 153, 153));
         tab2Panel.setPreferredSize(new java.awt.Dimension(596, 425));
@@ -185,6 +189,7 @@ public class menu extends javax.swing.JFrame {
         tab2Panel.setLayout(tab2PanelLayout);
         tab2PanelLayout.setHorizontalGroup(
             tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
             .addGap(0, 596, Short.MAX_VALUE)
         );
         tab2PanelLayout.setVerticalGroup(
@@ -193,6 +198,16 @@ public class menu extends javax.swing.JFrame {
         );
 
         itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
+=======
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        tab2PanelLayout.setVerticalGroup(
+            tab2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
+        );
+
+        itemSelect.add(tab2Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 430));
+>>>>>>> Stashed changes
 
         tab3Panel.setBackground(new java.awt.Color(51, 51, 255));
         tab3Panel.setPreferredSize(new java.awt.Dimension(596, 425));
@@ -201,14 +216,22 @@ public class menu extends javax.swing.JFrame {
         tab3Panel.setLayout(tab3PanelLayout);
         tab3PanelLayout.setHorizontalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
             .addGap(0, 596, Short.MAX_VALUE)
+=======
+            .addGap(0, 600, Short.MAX_VALUE)
+>>>>>>> Stashed changes
         );
         tab3PanelLayout.setVerticalGroup(
             tab3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
 
+<<<<<<< Updated upstream
         itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, -1, -1));
+=======
+        itemSelect.add(tab3Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 600, 430));
+>>>>>>> Stashed changes
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -247,7 +270,6 @@ public class menu extends javax.swing.JFrame {
         shoppingPanel.setVisible(false);
         tab2Panel.setVisible(false);
         tab3Panel.setVisible(true);
-        System.out.println("test");
     }//GEN-LAST:event_tab3MouseClicked
 
     /**
