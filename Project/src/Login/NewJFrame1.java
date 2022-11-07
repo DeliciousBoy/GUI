@@ -4,6 +4,7 @@
  */
 package Login;
 
+import ShoppingMenu.*;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -150,8 +151,8 @@ public class NewJFrame1 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         name = jTextField1.getText();
         JOptionPane.showMessageDialog(null, "You are login as " + name);
-        NewJFrame2 jf2 = new NewJFrame2();
-        jf2.show();
+         PT pt = new PT();
+        pt.show();
         dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
