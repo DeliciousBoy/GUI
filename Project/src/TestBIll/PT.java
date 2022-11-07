@@ -6,6 +6,7 @@ package TestBill;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
+import static TestBill.Bill.*;
 
 /**
  *
@@ -122,7 +123,7 @@ public class PT extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("pay");
+        jButton2.setText("PAY");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -163,7 +164,7 @@ public class PT extends javax.swing.JFrame {
                         .addGap(37, 37, 37))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addGap(136, 136, 136))))
+                        .addGap(117, 117, 117))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -243,18 +244,82 @@ public class PT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //Pay here
 
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        //Pay here
+        /*DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
                 for(int i = 0; i< jTable1.getRowCount();i++){
             nameItem.add(jTable1.getModel().getValueAt(i, 0).toString());
             priceItem.add(jTable1.getModel().getValueAt(i, 1).toString());
             qtyItem.add(jTable1.getModel().getValueAt(i, 2).toString());
-        }
-        
+        }*/
         Bill bill = new Bill();
         bill.show();
         dispose();
+        String totalPrice = lb_sumprice.getText();
+        /*String[] cha = {"A","B","C"};
+        String[] Pri = {"1","2","3"};*/
+         int NumRow2 = jTable1.getRowCount();
+         
+         String item[] = {" "," "," "," "," "," "};
+         for(int i = 0; i < NumRow2; i++){
+             String it = String.valueOf(jTable1.getValueAt(i, 0).toString());
+             //System.out.println("item : " + it);
+             item[i] = it;
+              System.out.println("item arr : " + item[i] );      
+         }
+         
+          String prices[] = {" "," "," "," "," "," "};
+            for(int i = 0; i < NumRow2; i++){
+             String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
+             //System.out.println("item : " + p);
+             prices[i] = p;
+              System.out.println("prices arr : " + prices[i] );      
+         }
+            
+          String qty[] = {" "," "," "," "," "," "};
+          for(int i = 0; i < NumRow2; i++){
+             String q = String.valueOf(jTable1.getValueAt(i, 2).toString());
+             //System.out.println("item : " + q);
+             qty[i] = q;
+              System.out.println("qty arr : " + qty[i] );      
+         }
+
+         
+          //String totalPrice = lb_sumprice.getText();
+         //System.out.println("lb_sumprice : " + totalPrice );   
+         
+                 
+
+        //JOptionPane.showMessageDialog(this, "---------- Bill ----------\n" + "item : ");
+        //Add item on name label 
+        Name1.setText(item[0]);
+        Name2.setText(item[1]);
+        Name3.setText(item[2]);
+        Name4.setText(item[3]);
+        Name5.setText(item[4]);
+        Name6.setText(item[5]);
+        
+        Price1.setText(prices[0]);
+        Price2.setText(prices[1]);
+        Price3.setText(prices[2]);
+        Price4.setText(prices[3]);
+        Price5.setText(prices[4]);
+        Price6.setText(prices[5]);
+        
+        q1.setText(qty[0]);
+        q2.setText(qty[1]);
+        q3.setText(qty[2]);
+        q4.setText(qty[3]);
+        q5.setText(qty[4]);
+        q6.setText(qty[5]);
+        
+        TotalP.setText(totalPrice);
+        /*jLabel14.setText(arr[0]);
+        jLabel15.setText(arr[1]);
+        jLabel16.setText(arr[2]);
+        jLabel17.setText(Pri[0]);
+        jLabel18.setText(Pri[1]);
+        jLabel19.setText(Pri[2]);*/
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
@@ -324,7 +389,7 @@ public class PT extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
-    private javax.swing.JButton jButton2;
+    public static javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;

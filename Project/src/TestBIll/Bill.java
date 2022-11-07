@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package TestBill;
-//import static TestBill.PT*;
-import java.util.ArrayList;
+import static TestBill.PT.*;
+import javax.swing.*;
+import java.awt.*;
+
+
 /**
  *
  * @author asus
@@ -27,99 +30,187 @@ public class Bill extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        Name1 = new javax.swing.JLabel();
+        Name2 = new javax.swing.JLabel();
+        Name3 = new javax.swing.JLabel();
+        Price1 = new javax.swing.JLabel();
+        Price2 = new javax.swing.JLabel();
+        Price3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        item1 = new javax.swing.JLabel();
-        item2 = new javax.swing.JLabel();
-        item3 = new javax.swing.JLabel();
-        item4 = new javax.swing.JLabel();
-        item5 = new javax.swing.JLabel();
-        item6 = new javax.swing.JLabel();
-        price_item1 = new javax.swing.JLabel();
-        price_item2 = new javax.swing.JLabel();
-        price_item3 = new javax.swing.JLabel();
-        price_item4 = new javax.swing.JLabel();
-        price_item5 = new javax.swing.JLabel();
-        price_item6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        q1 = new javax.swing.JLabel();
+        q2 = new javax.swing.JLabel();
+        q3 = new javax.swing.JLabel();
+        Name4 = new javax.swing.JLabel();
+        Name5 = new javax.swing.JLabel();
+        Name6 = new javax.swing.JLabel();
+        Price4 = new javax.swing.JLabel();
+        Price5 = new javax.swing.JLabel();
+        Price6 = new javax.swing.JLabel();
+        q4 = new javax.swing.JLabel();
+        q5 = new javax.swing.JLabel();
+        q6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        TotalP = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
-            }
-        });
 
-        jLabel1.setText("Bill payment");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Bill payment ");
 
-        jLabel2.setText("Minimart");
+        Name1.setText("null");
+
+        Name2.setText("null");
+
+        Name3.setText("null");
+
+        Price1.setText("0");
+
+        Price2.setText("0");
+
+        Price3.setText("0");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Name");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Price");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("qty");
+
+        q1.setText("0");
+
+        q2.setText("0");
+
+        q3.setText("0");
+
+        Name4.setText("null");
+
+        Name5.setText("null");
+
+        Name6.setText("null");
+
+        Price4.setText("0");
+
+        Price5.setText("0");
+
+        Price6.setText("0");
+
+        q4.setText("0");
+
+        q5.setText("0");
+
+        q6.setText("0");
+
+        jLabel5.setText("Total price =");
+
+        TotalP.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                        .addGap(62, 62, 62)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Name1)
+                            .addComponent(Name2)
+                            .addComponent(Name3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(Name5)
+                                .addComponent(Name4)
+                                .addComponent(Name6))
+                            .addComponent(jLabel5)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel1)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(31, 31, 31)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(Price4)
+                                        .addComponent(Price3)
+                                        .addComponent(Price5)
+                                        .addComponent(Price6))
+                                    .addGap(19, 19, 19))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Price2)
+                                    .addComponent(Price1))))
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(q4)
+                                .addComponent(q3)
+                                .addComponent(q5)
+                                .addComponent(q6))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(q1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(q2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(50, 50, 50))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(item6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(price_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34))
+                .addGap(104, 104, 104)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(item1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(item4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(price_item1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(price_item4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(item2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price_item3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(item3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(item6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(price_item2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(price_item6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(price_item5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(item5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name1)
+                    .addComponent(Price1)
+                    .addComponent(q1))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name2)
+                    .addComponent(Price2)
+                    .addComponent(q2))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name3)
+                    .addComponent(Price3)
+                    .addComponent(q3))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name4)
+                    .addComponent(Price4)
+                    .addComponent(q4))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name5)
+                    .addComponent(Price5)
+                    .addComponent(q5))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name6)
+                    .addComponent(Price6)
+                    .addComponent(q6))
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(TotalP))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         pack();
@@ -166,19 +257,29 @@ public class Bill extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel item1;
-    private javax.swing.JLabel item2;
-    private javax.swing.JLabel item3;
-    private javax.swing.JLabel item4;
-    private javax.swing.JLabel item5;
-    private javax.swing.JLabel item6;
+    public static javax.swing.JLabel Name1;
+    public static javax.swing.JLabel Name2;
+    public static javax.swing.JLabel Name3;
+    public static javax.swing.JLabel Name4;
+    public static javax.swing.JLabel Name5;
+    public static javax.swing.JLabel Name6;
+    public static javax.swing.JLabel Price1;
+    public static javax.swing.JLabel Price2;
+    public static javax.swing.JLabel Price3;
+    public static javax.swing.JLabel Price4;
+    public static javax.swing.JLabel Price5;
+    public static javax.swing.JLabel Price6;
+    public static javax.swing.JLabel TotalP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel price_item1;
-    private javax.swing.JLabel price_item2;
-    private javax.swing.JLabel price_item3;
-    private javax.swing.JLabel price_item4;
-    private javax.swing.JLabel price_item5;
-    private javax.swing.JLabel price_item6;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel q1;
+    public static javax.swing.JLabel q2;
+    public static javax.swing.JLabel q3;
+    public static javax.swing.JLabel q4;
+    public static javax.swing.JLabel q5;
+    public static javax.swing.JLabel q6;
     // End of variables declaration//GEN-END:variables
 }
