@@ -296,23 +296,45 @@ public class PT extends javax.swing.JFrame {
         if (jTable1.getSelectedRowCount() == 1) {
             delete.removeRow(jTable1.getSelectedRow());
             int NumRow = jTable1.getRowCount();
-            double Total = 0;
-            for (int i = 0; i < NumRow; i++) {
-                double Value = Double.valueOf(jTable1.getValueAt(i, 1).toString());
-                Total += Value;
-                lb_sumprice.setText(Double.toString(Total));
+            if (jTable1.getRowCount() == 0) {
+                lb_sumprice.setText("0");
+            } else {
+                double Total = 0;
+                for (int i = 0; i < NumRow; i++) {
+                    double Value = Double.valueOf(jTable1.getValueAt(i, 1).toString());
+                    Total += Value;
+                    lb_sumprice.setText(Double.toString(Total));
+                }
             }
         } else {
-            if (jTable1.getSelectedRowCount() == 0) {
-                JOptionPane.showMessageDialog(this, "It's empty !! ");
-            } else {
-                JOptionPane.showMessageDialog(this, "select any row for delete !! ");
+            if (jTable1.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "It's empty !!  ");
+            } else if (jTable1.getSelectedRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "select any row for delete !!");
             }
         }
     }//GEN-LAST:event_deleteActionPerformed
 
     /**
-     * @param args the command line arguments
+     * @param args the comme { double Total = 0;
+                for (int i = 0; i < NumRow; i++) {
+                    double Value = Double.valueOf(jTable1.getValueAt(i, 1).toString());
+                    Total += Value;
+                    lb_sumprice.setText(Double.toString(Total));
+                }
+            }
+        } else {
+            if(jTable1.getRowCount() == 0){
+                JOptionPane.showMessageDialog(this, "It's empty !!  ");
+                else if (jTable1.getSelectedRowCount() == 0) {
+                JOptionPane.showMessageDialog(this, "select any row for delete !!");
+            } 
+            }
+        }
+    }                                      
+
+    /**
+     * @paand line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
