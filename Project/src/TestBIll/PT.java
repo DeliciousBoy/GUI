@@ -252,26 +252,25 @@ public class PT extends javax.swing.JFrame {
             priceItem.add(jTable1.getModel().getValueAt(i, 1).toString());
             qtyItem.add(jTable1.getModel().getValueAt(i, 2).toString());
         }*/
+        
+        //Swap to Bill form
         Bill bill = new Bill();
         bill.show();
         dispose();
+        
+        //Decalre a Total price 
         String totalPrice = lb_sumprice.getText();
-        /*String[] cha = {"A","B","C"};
-        String[] Pri = {"1","2","3"};*/
          int NumRow2 = jTable1.getRowCount();
          
          String item[] = {" "," "," "," "," "," "};
          for(int i = 0; i < NumRow2; i++){
              String it = String.valueOf(jTable1.getValueAt(i, 0).toString());
-             //System.out.println("item : " + it);
              item[i] = it;
               System.out.println("item arr : " + item[i] );      
-         }
-         
+         }         
           String prices[] = {" "," "," "," "," "," "};
             for(int i = 0; i < NumRow2; i++){
              String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
-             //System.out.println("item : " + p);
              prices[i] = p;
               System.out.println("prices arr : " + prices[i] );      
          }
@@ -283,14 +282,6 @@ public class PT extends javax.swing.JFrame {
              qty[i] = q;
               System.out.println("qty arr : " + qty[i] );      
          }
-
-         
-          //String totalPrice = lb_sumprice.getText();
-         //System.out.println("lb_sumprice : " + totalPrice );   
-         
-                 
-
-        //JOptionPane.showMessageDialog(this, "---------- Bill ----------\n" + "item : ");
         //Add item on name label 
         Name1.setText(item[0]);
         Name2.setText(item[1]);
@@ -299,6 +290,7 @@ public class PT extends javax.swing.JFrame {
         Name5.setText(item[4]);
         Name6.setText(item[5]);
         
+        //Add price on price label
         Price1.setText(prices[0]);
         Price2.setText(prices[1]);
         Price3.setText(prices[2]);
@@ -306,6 +298,7 @@ public class PT extends javax.swing.JFrame {
         Price5.setText(prices[4]);
         Price6.setText(prices[5]);
         
+        //Add quantity on q label
         q1.setText(qty[0]);
         q2.setText(qty[1]);
         q3.setText(qty[2]);
@@ -313,13 +306,8 @@ public class PT extends javax.swing.JFrame {
         q5.setText(qty[4]);
         q6.setText(qty[5]);
         
+        //Set total price to label
         TotalP.setText(totalPrice);
-        /*jLabel14.setText(arr[0]);
-        jLabel15.setText(arr[1]);
-        jLabel16.setText(arr[2]);
-        jLabel17.setText(Pri[0]);
-        jLabel18.setText(Pri[1]);
-        jLabel19.setText(Pri[2]);*/
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
@@ -385,8 +373,7 @@ public class PT extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.addRow(dataRow);
     }
-//  
-
+//
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add;
     public static javax.swing.JButton jButton2;
