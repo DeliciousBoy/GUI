@@ -61,7 +61,7 @@ public class PT extends javax.swing.JFrame {
 
             },
             new String [] {
-                "item", "prices", "Qty"
+                "item", "Qty", "prices"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
@@ -269,14 +269,14 @@ public class PT extends javax.swing.JFrame {
          }         
           String prices[] = {" "," "," "," "," "," "};
             for(int i = 0; i < NumRow2; i++){
-             String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
+             String p = String.valueOf(jTable1.getValueAt(i, 2).toString());
              prices[i] = p;
               System.out.println("prices arr : " + prices[i] );      
          }
             
           String qty[] = {" "," "," "," "," "," "};
           for(int i = 0; i < NumRow2; i++){
-             String q = String.valueOf(jTable1.getValueAt(i, 2).toString());
+             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
              //System.out.println("item : " + q);
              qty[i] = q;
               System.out.println("qty arr : " + qty[i] );      
@@ -317,15 +317,18 @@ public class PT extends javax.swing.JFrame {
             AddRowToJTable(new Object[]{
                 jTable2.getModel().getValueAt(selected, 0),
                 //            jTable2.getModel().getValueAt(selected, 1),
-                sumPrice(),
-                lb.getText()
+                lb.getText(),
+                sumPrice()
             }
             );
             JOptionPane.showMessageDialog(null, "Add successful !! ");
+
         }
         else{
             JOptionPane.showMessageDialog(null, "Choose item and Input value of item !! ");
         }
+        item = 0;
+        lb.setText("0");
 
     
 //        JOptionPane.showMessageDialog(null, "Payment successful! ");
@@ -333,7 +336,7 @@ public class PT extends javax.swing.JFrame {
         int NumRow = jTable1.getRowCount();
         double Total = 0;
         for(int i = 0; i < NumRow; i++){
-        double Value = Double.valueOf(jTable1.getValueAt(i,1).toString());
+        double Value = Double.valueOf(jTable1.getValueAt(i,2).toString());
             Total += Value;
             lb_sumprice.setText(Double.toString(Total));
         }
@@ -351,7 +354,7 @@ public class PT extends javax.swing.JFrame {
             } else {
                 double Total = 0;
                 for (int i = 0; i < NumRow; i++) {
-                    double Value = Double.valueOf(jTable1.getValueAt(i, 1).toString());
+                    double Value = Double.valueOf(jTable1.getValueAt(i, 2).toString());
                     Total += Value;
                     lb_sumprice.setText(Double.toString(Total));
                 }
