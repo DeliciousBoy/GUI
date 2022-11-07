@@ -284,8 +284,8 @@ public class PT extends javax.swing.JFrame {
         double Total = 0;
         for(int i = 0; i < NumRow; i++){
         double Value = Double.valueOf(jTable1.getValueAt(i,1).toString());
-        Total += Value;
-        lb_sumprice.setText(Double.toString(Total));
+            Total += Value;
+            lb_sumprice.setText(Double.toString(Total));
         }
     }//GEN-LAST:event_addActionPerformed
 
@@ -293,12 +293,19 @@ public class PT extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel delete = (DefaultTableModel) jTable1.getModel();
         //delete row
-        if(jTable1.getSelectedRowCount()==1){
+        if (jTable1.getSelectedRowCount() == 1) {
             delete.removeRow(jTable1.getSelectedRow());
-        }else{
-            if(jTable1.getSelectedRowCount()==0){
+            int NumRow = jTable1.getRowCount();
+            double Total = 0;
+            for (int i = 0; i < NumRow; i++) {
+                double Value = Double.valueOf(jTable1.getValueAt(i, 1).toString());
+                Total += Value;
+                lb_sumprice.setText(Double.toString(Total));
+            }
+        } else {
+            if (jTable1.getSelectedRowCount() == 0) {
                 JOptionPane.showMessageDialog(this, "It's empty !! ");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(this, "select any row for delete !! ");
             }
         }
