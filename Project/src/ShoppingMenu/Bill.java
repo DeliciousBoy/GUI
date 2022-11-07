@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
+import static ShoppingMenu.PT.*;
+import javax.swing.*;
+import java.awt.*;
+
 
 /**
  *
@@ -26,21 +30,222 @@ public class Bill extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        Name1 = new javax.swing.JLabel();
+        Name2 = new javax.swing.JLabel();
+        Name3 = new javax.swing.JLabel();
+        Price1 = new javax.swing.JLabel();
+        Price2 = new javax.swing.JLabel();
+        Price3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        q1 = new javax.swing.JLabel();
+        q2 = new javax.swing.JLabel();
+        q3 = new javax.swing.JLabel();
+        Name4 = new javax.swing.JLabel();
+        Name5 = new javax.swing.JLabel();
+        Name6 = new javax.swing.JLabel();
+        Price4 = new javax.swing.JLabel();
+        Price5 = new javax.swing.JLabel();
+        Price6 = new javax.swing.JLabel();
+        q4 = new javax.swing.JLabel();
+        q5 = new javax.swing.JLabel();
+        q6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        TotalP = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setText("Bill payment ");
+
+        Name1.setText("null");
+
+        Name2.setText("null");
+
+        Name3.setText("null");
+
+        Price1.setText("0");
+
+        Price2.setText("0");
+
+        Price3.setText("0");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Name");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("Price");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("qty");
+
+        q1.setText("0");
+
+        q2.setText("0");
+
+        q3.setText("0");
+
+        Name4.setText("null");
+
+        Name5.setText("null");
+
+        Name6.setText("null");
+
+        Price4.setText("0");
+
+        Price5.setText("0");
+
+        Price6.setText("0");
+
+        q4.setText("0");
+
+        q5.setText("0");
+
+        q6.setText("0");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Total price =");
+
+        TotalP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TotalP.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Name1)
+                                    .addComponent(Name2)
+                                    .addComponent(Name3)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(Name5)
+                                        .addComponent(Name4)
+                                        .addComponent(Name6))))
+                            .addComponent(jLabel1))
+                        .addGap(56, 56, 56)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(q4)
+                                        .addComponent(q3)
+                                        .addComponent(q5)
+                                        .addComponent(q6))
+                                    .addComponent(q2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(q1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jLabel4)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel5)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 49, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Price2)
+                                    .addComponent(Price1)
+                                    .addComponent(Price4)
+                                    .addComponent(Price3)
+                                    .addComponent(Price5)
+                                    .addComponent(Price6))
+                                .addGap(71, 71, 71))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(57, 57, 57))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(107, 107, 107))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 508, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(96, 96, 96)
+                                        .addComponent(Name2))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(q1)))
+                                .addGap(33, 33, 33)
+                                .addComponent(Name3)
+                                .addGap(27, 27, 27)
+                                .addComponent(Name4)
+                                .addGap(28, 28, 28)
+                                .addComponent(Name5)
+                                .addGap(28, 28, 28)
+                                .addComponent(Name6)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel2))
+                                        .addGap(31, 31, 31)
+                                        .addComponent(Name1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(Price1)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(Price2)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(Price3)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(Price4)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(Price5)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(Price6)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(q2)
+                        .addGap(33, 33, 33)
+                        .addComponent(q3)
+                        .addGap(27, 27, 27)
+                        .addComponent(q4)
+                        .addGap(28, 28, 28)
+                        .addComponent(q5)
+                        .addGap(28, 28, 28)
+                        .addComponent(q6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(TotalP))
+                .addGap(70, 70, 70))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+//        PT pt = new PT();
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -78,5 +283,29 @@ public class Bill extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel Name1;
+    public static javax.swing.JLabel Name2;
+    public static javax.swing.JLabel Name3;
+    public static javax.swing.JLabel Name4;
+    public static javax.swing.JLabel Name5;
+    public static javax.swing.JLabel Name6;
+    public static javax.swing.JLabel Price1;
+    public static javax.swing.JLabel Price2;
+    public static javax.swing.JLabel Price3;
+    public static javax.swing.JLabel Price4;
+    public static javax.swing.JLabel Price5;
+    public static javax.swing.JLabel Price6;
+    public static javax.swing.JLabel TotalP;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel q1;
+    public static javax.swing.JLabel q2;
+    public static javax.swing.JLabel q3;
+    public static javax.swing.JLabel q4;
+    public static javax.swing.JLabel q5;
+    public static javax.swing.JLabel q6;
     // End of variables declaration//GEN-END:variables
 }
