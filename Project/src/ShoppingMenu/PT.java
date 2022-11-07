@@ -243,17 +243,6 @@ public class PT extends javax.swing.JFrame {
         return sumPricePerItem;
 
     }
-    
-//    private void merge2value(){
-//        
-//        DefaultTableModel newTable = (DefaultTableModel) jTable1.getModel() ;
-//        for (int i = 0; i < jTable1.getRowCount(); i++) {
-//            
-//            
-//        }
-//       
-//    }
-//    
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
 
         // Display item 
