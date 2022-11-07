@@ -6,7 +6,7 @@ package ShoppingMenu;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+import static ShoppingMenu.Bill.*;
 /**
  *
  * @author ASUS
@@ -257,6 +257,56 @@ public class PT extends javax.swing.JFrame {
         Bill bill = new Bill();
         bill.show();
         dispose();
+         //Decalre a Total price 
+        String totalPrice = lb_sumprice.getText();
+         int NumRow2 = jTable1.getRowCount();
+         
+         String item[] = {" "," "," "," "," "," "};
+         for(int i = 0; i < NumRow2; i++){
+             String it = String.valueOf(jTable1.getValueAt(i, 0).toString());
+             item[i] = it;
+              System.out.println("item arr : " + item[i] );      
+         }         
+          String prices[] = {" "," "," "," "," "," "};
+            for(int i = 0; i < NumRow2; i++){
+             String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
+             prices[i] = p;
+              System.out.println("prices arr : " + prices[i] );      
+         }
+            
+          String qty[] = {" "," "," "," "," "," "};
+          for(int i = 0; i < NumRow2; i++){
+             String q = String.valueOf(jTable1.getValueAt(i, 2).toString());
+             //System.out.println("item : " + q);
+             qty[i] = q;
+              System.out.println("qty arr : " + qty[i] );      
+         }
+        //Add item on name label 
+        Name1.setText(item[0]);
+        Name2.setText(item[1]);
+        Name3.setText(item[2]);
+        Name4.setText(item[3]);
+        Name5.setText(item[4]);
+        Name6.setText(item[5]);
+        
+        //Add price on price label
+        Price1.setText(prices[0]);
+        Price2.setText(prices[1]);
+        Price3.setText(prices[2]);
+        Price4.setText(prices[3]);
+        Price5.setText(prices[4]);
+        Price6.setText(prices[5]);
+        
+        //Add quantity on q label
+        q1.setText(qty[0]);
+        q2.setText(qty[1]);
+        q3.setText(qty[2]);
+        q4.setText(qty[3]);
+        q5.setText(qty[4]);
+        q6.setText(qty[5]);
+        
+        //Set total price to label
+        TotalP.setText(totalPrice);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
