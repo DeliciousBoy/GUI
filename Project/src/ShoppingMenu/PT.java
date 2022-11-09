@@ -3,11 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
-
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import static ShoppingMenu.Bill.*;
-
+import static Login.NewJFrame1._name;
 /**
  *
  * @author ASUS
@@ -50,6 +49,8 @@ public class PT extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lb_sumprice = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
+        Names = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -147,6 +148,10 @@ public class PT extends javax.swing.JFrame {
             }
         });
 
+        Names.setText("Null");
+
+        jLabel3.setText("Name:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -154,24 +159,27 @@ public class PT extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(add)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(delete))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(144, 144, 144)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(plus)
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Names)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(plus)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lb, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(minus))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(add)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(delete)))))
+                                .addComponent(minus)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -198,7 +206,11 @@ public class PT extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(lb_sumprice))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(4, 4, 4)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Names)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -226,7 +238,8 @@ public class PT extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+                             
+    
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
         // TODO add your handling code here:
         item++;
@@ -265,8 +278,13 @@ public class PT extends javax.swing.JFrame {
         //Pay here
         BillTest bill = new BillTest();
         bill.show();
+<<<<<<< HEAD
         //drawBill();
         // bill.BjLabel1.setText("sss");
+=======
+        //dispose();
+        //Decalre a Total price 
+>>>>>>> 020d9367a45db91bcbdff17974960572dcaf5c70
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
 
@@ -289,7 +307,21 @@ public class PT extends javax.swing.JFrame {
 
         bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
 
+<<<<<<< HEAD
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
+=======
+        //Add quantity on q label
+        q1.setText(qty[0]);
+        q2.setText(qty[1]);
+        q3.setText(qty[2]);
+        q4.setText(qty[3]);
+        q5.setText(qty[4]);
+        q6.setText(qty[5]);
+        
+         jLabel6.setText(_name);
+        //Set total price to label
+        TotalP.setText(totalPrice);
+>>>>>>> 020d9367a45db91bcbdff17974960572dcaf5c70
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
@@ -472,10 +504,12 @@ public class PT extends javax.swing.JFrame {
 //  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel Names;
     private javax.swing.JButton add;
     private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
