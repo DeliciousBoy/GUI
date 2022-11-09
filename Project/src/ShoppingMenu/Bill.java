@@ -62,8 +62,8 @@ public class Bill extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowActivated(java.awt.event.WindowEvent evt) {
-                formWindowActivated(evt);
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
             }
         });
 
@@ -275,9 +275,9 @@ public class Bill extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-//            PT pt = new PT();
+        //            PT pt = new PT();
         //SetTextFromFile
 //            GetFileInfo();
         DefaultTableModel del = (DefaultTableModel) payTable.getModel();
@@ -327,7 +327,6 @@ public class Bill extends javax.swing.JFrame {
 
                         System.out.println("================Test =============");
 
-
                         break;
                     }
                 }
@@ -341,7 +340,7 @@ public class Bill extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_formWindowActivated
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -393,7 +392,6 @@ public class Bill extends javax.swing.JFrame {
 //            e.printStackTrace();
 //        }
 //    }
-
     public static void AddRowToJTable(Object[] dataRow) {
         DefaultTableModel model = (DefaultTableModel) payTable.getModel();
         model.addRow(dataRow);
