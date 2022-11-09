@@ -3,10 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
+
 import static ShoppingMenu.PT.*;
 import javax.swing.*;
 import java.awt.*;
-
+import java.io.*;
+import java.util.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -54,8 +57,15 @@ public class Bill extends javax.swing.JFrame {
         q6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         TotalP = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        payTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Bill payment ");
@@ -111,6 +121,31 @@ public class Bill extends javax.swing.JFrame {
         TotalP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalP.setText("0");
 
+        payTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "Quantity", "Price"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(payTable);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -147,13 +182,12 @@ public class Bill extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jLabel5)))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 49, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -163,66 +197,47 @@ public class Bill extends javax.swing.JFrame {
                                     .addComponent(Price3)
                                     .addComponent(Price5)
                                     .addComponent(Price6))
-                                .addGap(71, 71, 71))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(57, 57, 57))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(14, 14, 14))
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
                 .addComponent(jLabel3)
-                .addGap(107, 107, 107))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel3)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(96, 96, 96)
-                                        .addComponent(Name2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(51, 51, 51)
-                                        .addComponent(q1)))
-                                .addGap(33, 33, 33)
-                                .addComponent(Name3)
-                                .addGap(27, 27, 27)
-                                .addComponent(Name4)
-                                .addGap(28, 28, 28)
-                                .addComponent(Name5)
-                                .addGap(28, 28, 28)
-                                .addComponent(Name6)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(96, 96, 96)
+                                .addComponent(Name2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jLabel2))
-                                        .addGap(31, 31, 31)
-                                        .addComponent(Name1))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(51, 51, 51)
-                                        .addComponent(Price1)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(Price2)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(Price3)
-                                        .addGap(27, 27, 27)
-                                        .addComponent(Price4)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(Price5)
-                                        .addGap(28, 28, 28)
-                                        .addComponent(Price6)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE))))
+                                .addGap(51, 51, 51)
+                                .addComponent(q1)))
+                        .addGap(33, 33, 33)
+                        .addComponent(Name3)
+                        .addGap(27, 27, 27)
+                        .addComponent(Name4)
+                        .addGap(28, 28, 28)
+                        .addComponent(Name5)
+                        .addGap(28, 28, 28)
+                        .addComponent(Name6))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4))
+                        .addGap(31, 31, 31)
+                        .addComponent(Name1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
                         .addComponent(q2)
                         .addGap(33, 33, 33)
                         .addComponent(q3)
@@ -231,12 +246,30 @@ public class Bill extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(q5)
                         .addGap(28, 28, 28)
-                        .addComponent(q6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(q6))
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(Price1)
+                        .addGap(29, 29, 29)
+                        .addComponent(Price2)
+                        .addGap(33, 33, 33)
+                        .addComponent(Price3)
+                        .addGap(27, 27, 27)
+                        .addComponent(Price4)
+                        .addGap(28, 28, 28)
+                        .addComponent(Price5)
+                        .addGap(28, 28, 28)
+                        .addComponent(Price6)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(TotalP))
                 .addGap(70, 70, 70))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -244,7 +277,70 @@ public class Bill extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
-//        PT pt = new PT();
+//            PT pt = new PT();
+        //SetTextFromFile
+//            GetFileInfo();
+        DefaultTableModel del = (DefaultTableModel) payTable.getModel();
+        String name_item, price_item, quantity_item;
+        double price_item_double = 0;
+        double sum_price;
+//        int quantity_item,i = 0;
+        int quantity_item_int = 0, sum_quantity;
+//        int i = 0;
+        try {
+            File myObj = new File("CartTest.txt");
+            Scanner myReader = new Scanner(myObj);
+            myReader.useDelimiter("\\|");
+            while (myReader.hasNext()) {
+
+                name_item = myReader.next();
+                quantity_item = myReader.next();
+                price_item = myReader.next();
+
+                quantity_item_int = Integer.parseInt(quantity_item);
+                price_item_double = Double.parseDouble(price_item);
+
+                sum_quantity = quantity_item_int;
+                sum_price = price_item_double;
+
+                for (int k = 0; k <= payTable.getRowCount(); k++) {
+                    if (payTable.getRowCount() == 0) {
+                        AddRowToJTable(new Object[]{name_item, quantity_item, price_item});
+                        break;
+                    } else if (name_item.toString().compareTo(payTable.getValueAt(k, 0).toString()) != 0) {
+                        AddRowToJTable(new Object[]{name_item, quantity_item, price_item});
+                        break;
+                    } //                
+                    else {
+//                    AddRowToJTable(new Object[]{name_item, quantity_item, price_item});
+                        quantity_item_int = Integer.parseInt(quantity_item);
+                        price_item_double = Double.parseDouble(price_item);
+                        for (int j = 0; j <= payTable.getRowCount(); j++) {
+                            if (name_item.toString().compareTo(payTable.getValueAt(j, 0).toString()) == 0) {
+                                sum_quantity += Integer.parseInt(payTable.getValueAt(j, 1).toString());
+                                sum_price += Double.parseDouble(payTable.getValueAt(j, 2).toString());
+                                del.removeRow(j);
+                                AddRowToJTable(new Object[]{name_item, sum_quantity, sum_price});
+                                break;
+                            }
+                        }
+
+                        System.out.println("================Test =============");
+
+
+                        break;
+                    }
+                }
+                System.out.println("================Test =============");
+                System.out.println("item : " + name_item + " quantity : " + quantity_item + " price : " + price_item);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -282,6 +378,27 @@ public class Bill extends javax.swing.JFrame {
         });
     }
 
+//    public static void GetFileInfo() {
+//        try {
+//            File myObj = new File("CartTest.txt");
+//            Scanner myReader = new Scanner(myObj);
+//            while (myReader.hasNextLine()) {
+//                String data = myReader.nextLine();
+//                System.out.println("Hello World");
+//                System.out.println(data);
+//            }
+//            myReader.close();
+//        } catch (FileNotFoundException e) {
+//            System.out.println("An error occurred.");
+//            e.printStackTrace();
+//        }
+//    }
+
+    public static void AddRowToJTable(Object[] dataRow) {
+        DefaultTableModel model = (DefaultTableModel) payTable.getModel();
+        model.addRow(dataRow);
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JLabel Name1;
     public static javax.swing.JLabel Name2;
@@ -301,6 +418,8 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    static javax.swing.JTable payTable;
     public static javax.swing.JLabel q1;
     public static javax.swing.JLabel q2;
     public static javax.swing.JLabel q3;
