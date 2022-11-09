@@ -3,13 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
-
+import static ShoppingMenu.PT.*;
 import ShoppingMenu.*;
 import java.awt.Toolkit;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 //<<<<<<< HEAD
-import javax.swing.JTextField;
 //=======
 //>>>>>>> 3bf19402ff5030faa7aadaafa32e3d406d8e0045
 
@@ -147,8 +145,6 @@ public class NewJFrame1 extends javax.swing.JFrame {
     
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        
-        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -157,12 +153,12 @@ public class NewJFrame1 extends javax.swing.JFrame {
          PT pt = new PT();
         pt.show();
         dispose();
-        
+        Names.setText(name);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
       private void SetIcon() {
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Icons8-themes-30.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons8-card-payment-30.png")));
     }
       
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
