@@ -3,13 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
-
 import ShoppingMenu.*;
 import java.awt.Toolkit;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import static ShoppingMenu.PT.*;
 //<<<<<<< HEAD
-import javax.swing.JTextField;
 //=======
 //>>>>>>> 3bf19402ff5030faa7aadaafa32e3d406d8e0045
 
@@ -21,7 +19,7 @@ public class NewJFrame1 extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame1
      */
-    public static String name;
+    public static String _name;
     public NewJFrame1() {
         initComponents();
         SetIcon();
@@ -152,13 +150,12 @@ public class NewJFrame1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        name = jTextField1.getText();
-        JOptionPane.showMessageDialog(null, "You are login as " + name);
-         PT pt = new PT();
+        _name = jTextField1.getText();
+        JOptionPane.showMessageDialog(null, "You are login as " + _name);
+        PT pt = new PT();
         pt.show();
         dispose();
-        
-        
+         Names.setText(_name);
     }//GEN-LAST:event_jButton1ActionPerformed
 
       private void SetIcon() {

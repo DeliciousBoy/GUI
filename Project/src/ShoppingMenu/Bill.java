@@ -3,12 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
-import Login.NewJFrame1;
-import static ShoppingMenu.PT.*;
-import javax.swing.*;
-import java.awt.*;
-
-
 /**
  *
  * @author asus
@@ -56,6 +50,7 @@ public class Bill extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         TotalP = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -118,7 +113,9 @@ public class Bill extends javax.swing.JFrame {
         TotalP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalP.setText("0");
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("Null");
+
+        jLabel7.setText("Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,13 +153,9 @@ public class Bill extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jLabel5)))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 67, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -177,8 +170,14 @@ public class Bill extends javax.swing.JFrame {
                                     .addComponent(Price6))
                                 .addGap(40, 40, 40))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                        .addGap(57, 57, 57))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TotalP, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)))
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -232,7 +231,7 @@ public class Bill extends javax.swing.JFrame {
                                         .addComponent(Price5)
                                         .addGap(28, 28, 28)
                                         .addComponent(Price6)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addComponent(q2)
@@ -245,22 +244,22 @@ public class Bill extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(q6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(TotalP))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(54, 54, 54))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        // TODO add your handling code here:
-//        PT pt = new PT();
-//          NewJFrame1 test = new NewJFrame1();
-//          testLb.setText();
+           //jLabel6.setText(name);
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -318,6 +317,7 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     public static javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     public static javax.swing.JLabel q1;
     public static javax.swing.JLabel q2;
     public static javax.swing.JLabel q3;
