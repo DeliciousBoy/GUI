@@ -113,27 +113,27 @@ public class PT extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Dog", "1"},
-                {"fish", "2"},
-                {"Secret Menu#3", "34"},
-                {"Secret Menu#4", "4"},
-                {"Secret Menu#5", "5"},
-                {"Secret Menu#6", "7"},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {"Dog", "1.0"},
+                {"Fish", "2.0"},
+                {"Chocolate bar", "15.0"},
+                {"Milk (Meji)", "42.5"},
+                {"Pork guts", "8.5"},
+                {"Condom", "29.5"},
+                {"Chicken", "5.0"},
+                {"Shampoo", "80.25"}
             },
             new String [] {
                 "item", "price"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable2.setToolTipText("");
         jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -142,9 +142,6 @@ public class PT extends javax.swing.JFrame {
             }
         });
         jScrollPane3.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(1).setResizable(false);
-        }
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -244,7 +241,15 @@ public class PT extends javax.swing.JFrame {
             new String [] {
                 "item", "Qty", "prices"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -329,6 +334,7 @@ public class PT extends javax.swing.JFrame {
         // TODO add your handling code here:
         item++;
         lb.setText(Integer.toString(item));
+        //lb.setText(Double.toString(item));
     }//GEN-LAST:event_plusActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
@@ -336,16 +342,18 @@ public class PT extends javax.swing.JFrame {
         if (item > 0) {
             item--;
             lb.setText(Integer.toString(item));
+            //lb.setText(Double.toString(item));
         }
 
     }//GEN-LAST:event_minusActionPerformed
 
     int selected;
-    int sumPricePerItem;
+    double sumPricePerItem;
 
-    private int sumPrice() {
+    private double sumPrice() {
         sumPricePerItem = 0;
-        sumPricePerItem = item * Integer.parseInt(jTable2.getValueAt(selected, 1).toString());
+        //sumPricePerItem = item * Integer.parseInt(jTable2.getValueAt(selected, 1).toString());
+        sumPricePerItem = Double.valueOf(item) * Double.parseDouble(jTable2.getValueAt(selected, 1).toString());
         return sumPricePerItem;
 
     }
@@ -373,7 +381,7 @@ public class PT extends javax.swing.JFrame {
         for (int i = 0; i < NumRow2; i++) {
             String item = String.valueOf(jTable1.getValueAt(i, 0).toString());
             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
-            String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
+            String p = String.valueOf(jTable1.getValueAt(i, 2).toString());
             bill.textArea.setText(bill.textArea.getText() +item+"\t"+q+"\t"+p + "\n");
 //           
         }

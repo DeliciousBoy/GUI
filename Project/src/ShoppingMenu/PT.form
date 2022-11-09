@@ -240,42 +240,26 @@
             <Component class="javax.swing.JTable" name="jTable2">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="16">
-                    <Column editable="true" title="item" type="java.lang.Object">
+                  <Table columnCount="2" rowCount="8">
+                    <Column editable="false" title="item" type="java.lang.Object">
                       <Data value="Dog"/>
-                      <Data value="fish"/>
-                      <Data value="Secret Menu#3"/>
-                      <Data value="Secret Menu#4"/>
-                      <Data value="Secret Menu#5"/>
-                      <Data value="Secret Menu#6"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
+                      <Data value="Fish"/>
+                      <Data value="Chocolate bar"/>
+                      <Data value="Milk (Meji)"/>
+                      <Data value="Pork guts"/>
+                      <Data value="Condom"/>
+                      <Data value="Chicken"/>
+                      <Data value="Shampoo"/>
                     </Column>
-                    <Column editable="true" title="price" type="java.lang.Object">
-                      <Data value="1"/>
-                      <Data value="2"/>
-                      <Data value="34"/>
-                      <Data value="4"/>
-                      <Data value="5"/>
-                      <Data value="7"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
-                      <Data value="null"/>
+                    <Column editable="false" title="price" type="java.lang.Object">
+                      <Data value="1.0"/>
+                      <Data value="2.0"/>
+                      <Data value="15.0"/>
+                      <Data value="42.5"/>
+                      <Data value="8.5"/>
+                      <Data value="29.5"/>
+                      <Data value="5.0"/>
+                      <Data value="80.25"/>
                     </Column>
                   </Table>
                 </Property>
@@ -287,7 +271,7 @@
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="false">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
                       <Renderer/>
@@ -460,9 +444,9 @@
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="3" rowCount="0">
-                    <Column editable="true" title="item" type="java.lang.Object"/>
-                    <Column editable="true" title="Qty" type="java.lang.Object"/>
-                    <Column editable="true" title="prices" type="java.lang.Object"/>
+                    <Column editable="false" title="item" type="java.lang.Object"/>
+                    <Column editable="false" title="Qty" type="java.lang.Object"/>
+                    <Column editable="false" title="prices" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
