@@ -6,6 +6,7 @@ package ShoppingMenu;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.awt.Toolkit;
+import static Login.CustomerLogin.name;
 /**
  *
  * @author ASUS
@@ -365,7 +366,7 @@ public class PT extends javax.swing.JFrame {
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
         bill.textArea.setText("                         XXX  XXX X XXX \n");
-
+        //bill.textArea.setText("                         Costumer:" + name + "\n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
         bill.textArea.setText(bill.textArea.getText() + "   Item \tQty \tPrice \n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
@@ -374,13 +375,17 @@ public class PT extends javax.swing.JFrame {
             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
             String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
             bill.textArea.setText(bill.textArea.getText() +item+"\t"+q+"\t"+p + "\n");
-
 //           
         }
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
-
+        
+        bill.textArea.setText(bill.textArea.getText() +"Costumer: " + name + "\n");
+        
+        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
+        
         bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
-
+        
+        bill.textArea.setText(bill.textArea.getText() + "\t\tCashier\n");
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed

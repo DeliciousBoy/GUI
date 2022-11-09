@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
-
+import static Login.CustomerLogin.name;
 import java.awt.Toolkit;
 
 /**
