@@ -278,16 +278,8 @@ public class PT extends javax.swing.JFrame {
         //Pay here
         BillTest bill = new BillTest();
         bill.show();
-<<<<<<< HEAD
-        //drawBill();
-        // bill.BjLabel1.setText("sss");
-=======
-        //dispose();
-        //Decalre a Total price 
->>>>>>> 020d9367a45db91bcbdff17974960572dcaf5c70
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
-
         bill.textArea.setText("                         XXX  XXX X XXX \n");
 
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
@@ -307,21 +299,6 @@ public class PT extends javax.swing.JFrame {
 
         bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
 
-<<<<<<< HEAD
-        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
-=======
-        //Add quantity on q label
-        q1.setText(qty[0]);
-        q2.setText(qty[1]);
-        q3.setText(qty[2]);
-        q4.setText(qty[3]);
-        q5.setText(qty[4]);
-        q6.setText(qty[5]);
-        
-         jLabel6.setText(_name);
-        //Set total price to label
-        TotalP.setText(totalPrice);
->>>>>>> 020d9367a45db91bcbdff17974960572dcaf5c70
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
