@@ -6,7 +6,6 @@ package ShoppingMenu;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import static ShoppingMenu.Bill.*;
-import static Login.NewJFrame1._name;
 /**
  *
  * @author ASUS
@@ -72,8 +71,8 @@ public class PT extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Secret Menu#1", "1"},
-                {"Secret Menu#2", "2"},
+                {"Dog", "1"},
+                {"fish", "2"},
                 {"Secret Menu#3", "34"},
                 {"Secret Menu#4", "4"},
                 {"Secret Menu#5", "5"},
@@ -283,15 +282,13 @@ public class PT extends javax.swing.JFrame {
         bill.textArea.setText("                         XXX  XXX X XXX \n");
 
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
-        bill.textArea.setText(bill.textArea.getText() + "   Item                       Qty                          Price \n");
+        bill.textArea.setText(bill.textArea.getText() + "   Item \tQty \tPrice \n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
         for (int i = 0; i < NumRow2; i++) {
             String item = String.valueOf(jTable1.getValueAt(i, 0).toString());
-            bill.textArea.setText(bill.textArea.getText()+ item);
             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
-            bill.textArea.setText(bill.textArea.getText() + "                        x" + q);
             String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
-            bill.textArea.setText(bill.textArea.getText() + "     " + p + "\n");
+            bill.textArea.setText(bill.textArea.getText() +item+"\t"+q+"\t"+p + "\n");
 
 //           
         }
