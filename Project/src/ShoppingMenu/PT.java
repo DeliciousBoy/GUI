@@ -71,12 +71,12 @@ public class PT extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"a", "1"},
-                {"b", "2"},
-                {"c", "34"},
-                {"d", "4"},
-                {"e", "5"},
-                {"f", "7"},
+                {"Secret Menu#1", "1"},
+                {"Secret Menu#2", "2"},
+                {"Secret Menu#3", "34"},
+                {"Secret Menu#4", "4"},
+                {"Secret Menu#5", "5"},
+                {"Secret Menu#6", "7"},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -92,12 +92,17 @@ public class PT extends javax.swing.JFrame {
                 "item", "price"
             }
         ));
+        jTable2.setToolTipText("");
+        jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable2MouseClicked(evt);
             }
         });
         jScrollPane3.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         minus.setText("-");
         minus.addActionListener(new java.awt.event.ActionListener() {
@@ -257,59 +262,34 @@ public class PT extends javax.swing.JFrame {
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
         //Pay here
-        Bill bill = new Bill();
+        //Pay here
+        BillTest bill = new BillTest();
         bill.show();
-//        dispose();
-        //Decalre a Total price 
+        //drawBill();
+        // bill.BjLabel1.setText("sss");
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
 
-        String item[] = {" ", " ", " ", " ", " ", " "};
-        for (int i = 0; i < NumRow2; i++) {
-            String it = String.valueOf(jTable1.getValueAt(i, 0).toString());
-            item[i] = it;
-            System.out.println("item arr : " + item[i]);
-        }
-        String prices[] = {" ", " ", " ", " ", " ", " "};
-        for (int i = 0; i < NumRow2; i++) {
-            String p = String.valueOf(jTable1.getValueAt(i, 2).toString());
-            prices[i] = p;
-            System.out.println("prices arr : " + prices[i]);
-        }
+        bill.textArea.setText("                         XXX  XXX X XXX \n");
 
-        String qty[] = {" ", " ", " ", " ", " ", " "};
+        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
+        bill.textArea.setText(bill.textArea.getText() + "   Item                       Qty                          Price \n");
+        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
         for (int i = 0; i < NumRow2; i++) {
+            String item = String.valueOf(jTable1.getValueAt(i, 0).toString());
+            bill.textArea.setText(bill.textArea.getText()+ item);
             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
-            //System.out.println("item : " + q);
-            qty[i] = q;
-            System.out.println("qty arr : " + qty[i]);
+            bill.textArea.setText(bill.textArea.getText() + "                        x" + q);
+            String p = String.valueOf(jTable1.getValueAt(i, 1).toString());
+            bill.textArea.setText(bill.textArea.getText() + "     " + p + "\n");
+
+//           
         }
-        //Add item on name label 
-        Name1.setText(item[0]);
-        Name2.setText(item[1]);
-        Name3.setText(item[2]);
-        Name4.setText(item[3]);
-        Name5.setText(item[4]);
-        Name6.setText(item[5]);
+        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
 
-        //Add price on price label
-        Price1.setText(prices[0]);
-        Price2.setText(prices[1]);
-        Price3.setText(prices[2]);
-        Price4.setText(prices[3]);
-        Price5.setText(prices[4]);
-        Price6.setText(prices[5]);
+        bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
 
-        //Add quantity on q label
-        q1.setText(qty[0]);
-        q2.setText(qty[1]);
-        q3.setText(qty[2]);
-        q4.setText(qty[3]);
-        q5.setText(qty[4]);
-        q6.setText(qty[5]);
-
-        //Set total price to label
-        TotalP.setText(totalPrice);
+        bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
@@ -374,7 +354,7 @@ public class PT extends javax.swing.JFrame {
 
                     System.out.println("dfQtyJT1 : " + dfQtyJT1);
                     System.out.println("dfPriceJT1 : " + dfPriceJT1);
-                    
+
                     jTable1.setValueAt(jTable2.getModel().getValueAt(selected, 0), get_i, 0);
                     jTable1.setValueAt(dfQtyJT1, get_i, 1);
                     jTable1.setValueAt(dfPriceJT1, get_i, 2);
@@ -387,9 +367,8 @@ public class PT extends javax.swing.JFrame {
 //                    dfQtyJT1 = 0;
 
 //                    
-
                 }
-                
+
             }
 
             JOptionPane.showMessageDialog(null, "Add successful !! ");
@@ -437,6 +416,11 @@ public class PT extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_deleteActionPerformed
+
+
+
+
+
 
     /**
      * @param args the comme { double Total = 0; for (int i = 0; i < NumRow;
