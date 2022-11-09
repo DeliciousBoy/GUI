@@ -116,7 +116,7 @@ public class PT extends javax.swing.JFrame {
                 {"Dog", "1.0"},
                 {"Fish", "2.0"},
                 {"Chocolate bar", "15.0"},
-                {"Milk (Meji)", "42.5"},
+                {"Milk", "42.5"},
                 {"Pork guts", "8.5"},
                 {"Condom", "29.5"},
                 {"Chicken", "5.0"},
@@ -125,15 +125,7 @@ public class PT extends javax.swing.JFrame {
             new String [] {
                 "item", "price"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jTable2.setToolTipText("");
         jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -368,7 +360,6 @@ public class PT extends javax.swing.JFrame {
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
         //Pay here
-        //Pay here
         Bill bill = new Bill();
         bill.show();
         String totalPrice = lb_sumprice.getText();
@@ -436,8 +427,8 @@ public class PT extends javax.swing.JFrame {
                     //numJT2+ numJT1
                     //priceJT2+ priceJT!
                     int numJT2 = Integer.valueOf(lb.getText().toString());
-                    int priceJT2 = Integer.valueOf(jTable2.getValueAt(selected, 1).toString());
-                    int SpJT2 = numJT2 * priceJT2;
+                    double priceJT2 = Double.valueOf(jTable2.getValueAt(selected, 1).toString());
+                    double SpJT2 = Double.valueOf(numJT2) * priceJT2;
                     System.out.println("n2 : " + numJT2);
                     System.out.println("p2 : " + priceJT2);
                     System.out.println("SUMp2 = numJT2 *  priceJT2 : " + SpJT2);
@@ -445,7 +436,7 @@ public class PT extends javax.swing.JFrame {
                     System.out.println("-----------------------");
 
                     int numJT1 = Integer.valueOf(jTable1.getValueAt(get_i, 1).toString());
-                    int priceJT1 = Integer.valueOf(jTable1.getValueAt(get_i, 2).toString());
+                    double priceJT1 = Double.valueOf(jTable1.getValueAt(get_i, 2).toString());
                     //int SpJT2 = Integer.valueOf(jTable1.getValueAt(i, 2).toString());
 
                     System.out.println("numJT1 : " + numJT1);
@@ -454,7 +445,7 @@ public class PT extends javax.swing.JFrame {
                     System.out.println("-----------------------");
 
                     int dfQtyJT1 = numJT2 + numJT1;
-                    int dfPriceJT1 = SpJT2 + priceJT1;
+                    double dfPriceJT1 = SpJT2 + priceJT1;
 
                     System.out.println("dfQtyJT1 : " + dfQtyJT1);
                     System.out.println("dfPriceJT1 : " + dfPriceJT1);
