@@ -333,12 +333,14 @@ public class PT extends javax.swing.JFrame {
 
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
         // TODO add your handling code here:
+        //gide
         item++;
         lb.setText(Integer.toString(item));
     }//GEN-LAST:event_plusActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
         // TODO add your handling code here:
+        //gide
         if (item > 0) {
             item--;
             lb.setText(Integer.toString(item));
@@ -366,6 +368,7 @@ public class PT extends javax.swing.JFrame {
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
         //Pay here
+        //IT
         Bill bill = new Bill();
         bill.show();
         String totalPrice = lb_sumprice.getText();
@@ -394,7 +397,7 @@ public class PT extends javax.swing.JFrame {
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-
+        //art
         // Add item to Cart here
         int numRow = jTable1.getRowCount();
 
@@ -477,6 +480,7 @@ public class PT extends javax.swing.JFrame {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        //ter
         DefaultTableModel delete = (DefaultTableModel) jTable1.getModel();
         //delete row
         if (jTable1.getSelectedRowCount() == 1) {
