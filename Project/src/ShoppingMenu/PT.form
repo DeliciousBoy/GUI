@@ -163,6 +163,9 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Component class="javax.swing.JTextPane" name="jTextPane1">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -240,10 +243,8 @@
             <Component class="javax.swing.JTable" name="jTable2">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="2" rowCount="8">
-                    <Column editable="true" title="item" type="java.lang.Object">
-                      <Data value="Dog"/>
-                      <Data value="Fish"/>
+                  <Table columnCount="2" rowCount="6">
+                    <Column editable="false" title="item" type="java.lang.Object">
                       <Data value="Chocolate bar"/>
                       <Data value="Milk"/>
                       <Data value="Pork guts"/>
@@ -251,9 +252,7 @@
                       <Data value="Chicken"/>
                       <Data value="Shampoo"/>
                     </Column>
-                    <Column editable="true" title="price" type="java.lang.Object">
-                      <Data value="1.0"/>
-                      <Data value="2.0"/>
+                    <Column editable="false" title="price" type="java.lang.Object">
                       <Data value="15.0"/>
                       <Data value="42.5"/>
                       <Data value="8.5"/>
@@ -446,7 +445,7 @@
                   <Table columnCount="3" rowCount="0">
                     <Column editable="false" title="item" type="java.lang.Object"/>
                     <Column editable="false" title="Qty" type="java.lang.Object"/>
-                    <Column editable="false" title="prices" type="java.lang.Object"/>
+                    <Column editable="false" title="price" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

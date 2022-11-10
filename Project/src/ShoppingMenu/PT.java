@@ -78,6 +78,7 @@ public class PT extends javax.swing.JFrame {
             }
         });
 
+        jTextPane1.setEditable(false);
         jScrollPane4.setViewportView(jTextPane1);
 
         plus.setText("+");
@@ -113,8 +114,6 @@ public class PT extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Dog", "1.0"},
-                {"Fish", "2.0"},
                 {"Chocolate bar", "15.0"},
                 {"Milk", "42.5"},
                 {"Pork guts", "8.5"},
@@ -125,7 +124,15 @@ public class PT extends javax.swing.JFrame {
             new String [] {
                 "item", "price"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable2.setToolTipText("");
         jTable2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -231,7 +238,7 @@ public class PT extends javax.swing.JFrame {
 
             },
             new String [] {
-                "item", "Qty", "prices"
+                "item", "Qty", "price"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -364,7 +371,9 @@ public class PT extends javax.swing.JFrame {
         bill.show();
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
-        bill.textArea.setText("                         XXX  XXX X XXX \n");
+//        bill.textArea.setText("                         XXX  XXX X XXX \n");
+        bill.textArea.setText("\tMai Saduak Sue\n");
+        bill.textArea.setText(bill.textArea.getText() + "\t       minimart\n");
         //bill.textArea.setText("                         Costumer:" + name + "\n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
         bill.textArea.setText(bill.textArea.getText() + "   Item \tQty \tPrice \n");
@@ -385,6 +394,7 @@ public class PT extends javax.swing.JFrame {
         bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
         
         bill.textArea.setText(bill.textArea.getText() + "\t\tCashier\n");
+        jTable1.setModel(new DefaultTableModel(null,new String[]{"item","Qty.","price"}));
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
