@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Login;
+
 import static ShoppingMenu.PT.*;
 import ShoppingMenu.*;
 import java.awt.Toolkit;
@@ -16,10 +17,12 @@ import javax.swing.JOptionPane;
  * @author acer
  */
 public class CustomerLogin extends javax.swing.JFrame {
+
     /**
      * Creates new form CustomerLogin
      */
     public static String name;
+
     public CustomerLogin() {
         initComponents();
         SetIcon();
@@ -48,11 +51,6 @@ public class CustomerLogin extends javax.swing.JFrame {
         setTitle("Minimart Shop");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowIconified(java.awt.event.WindowEvent evt) {
-                formWindowIconified(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Welcome to minimart");
@@ -141,8 +139,8 @@ public class CustomerLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    
+
+
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -150,28 +148,20 @@ public class CustomerLogin extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         name = jTextField1.getText();
         JOptionPane.showMessageDialog(null, "You are login as " + name);
-         PT pt = new PT();
+        PT pt = new PT();
         pt.show();
         dispose();
         Names.setText(name);
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-      private void SetIcon() {
+    private void SetIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons8-card-payment-30.png")));
     }
-      
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      jTextField1.setText("");
+        jTextField1.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void formWindowIconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowIconified
-
-        //Icon = new ImageIcon("C:\\Users\\acer\\Downloads\\Shop.png");
-        //setIconImage(Icon.getImage());
-        //C:\\Users\\acer\\Downloads\\Shop.png
-        
-    }//GEN-LAST:event_formWindowIconified
 
     /**
      * @param args the command line arguments
@@ -205,7 +195,7 @@ public class CustomerLogin extends javax.swing.JFrame {
                 new CustomerLogin().setVisible(true);
             }
         });
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -3,10 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.awt.Toolkit;
 import static Login.CustomerLogin.name;
+
 /**
  *
  * @author ASUS
@@ -14,7 +16,6 @@ import static Login.CustomerLogin.name;
 public class PT extends javax.swing.JFrame {
 
     /**
-     * Creates new form PT
      */
     int item;
     public static double sum_price = 0;
@@ -23,10 +24,11 @@ public class PT extends javax.swing.JFrame {
         initComponents();
         SetIcon();
     }
-    
-      private void SetIcon() {
+
+    private void SetIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons8-card-payment-30.png")));
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -327,13 +329,12 @@ public class PT extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-                             
-    
+
+
     private void plusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusActionPerformed
         // TODO add your handling code here:
         item++;
         lb.setText(Integer.toString(item));
-        //lb.setText(Double.toString(item));
     }//GEN-LAST:event_plusActionPerformed
 
     private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
@@ -341,7 +342,6 @@ public class PT extends javax.swing.JFrame {
         if (item > 0) {
             item--;
             lb.setText(Integer.toString(item));
-            //lb.setText(Double.toString(item));
         }
 
     }//GEN-LAST:event_minusActionPerformed
@@ -351,7 +351,6 @@ public class PT extends javax.swing.JFrame {
 
     private double sumPrice() {
         sumPricePerItem = 0;
-        //sumPricePerItem = item * Integer.parseInt(jTable2.getValueAt(selected, 1).toString());
         sumPricePerItem = Double.valueOf(item) * Double.parseDouble(jTable2.getValueAt(selected, 1).toString());
         return sumPricePerItem;
 
@@ -371,10 +370,8 @@ public class PT extends javax.swing.JFrame {
         bill.show();
         String totalPrice = lb_sumprice.getText();
         int NumRow2 = jTable1.getRowCount();
-//        bill.textArea.setText("                         XXX  XXX X XXX \n");
         bill.textArea.setText("\tMai Saduak Sue\n");
         bill.textArea.setText(bill.textArea.getText() + "\t       minimart\n");
-        //bill.textArea.setText("                         Costumer:" + name + "\n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
         bill.textArea.setText(bill.textArea.getText() + "   Item \tQty \tPrice \n");
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
@@ -382,25 +379,23 @@ public class PT extends javax.swing.JFrame {
             String item = String.valueOf(jTable1.getValueAt(i, 0).toString());
             String q = String.valueOf(jTable1.getValueAt(i, 1).toString());
             String p = String.valueOf(jTable1.getValueAt(i, 2).toString());
-            bill.textArea.setText(bill.textArea.getText() +item+"\t"+q+"\t"+p + "\n");
-//           
+            bill.textArea.setText(bill.textArea.getText() + item + "\t" + q + "\t" + p + "\n");
         }
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
-        
-        bill.textArea.setText(bill.textArea.getText() +"Costumer: " + name + "\n");
-        
+
+        bill.textArea.setText(bill.textArea.getText() + "Costumer: " + name + "\n");
+
         bill.textArea.setText(bill.textArea.getText() + "----------------------------------------------------------------\n");
-        
+
         bill.textArea.setText(bill.textArea.getText() + "Total Price : " + totalPrice + "\n");
-        
+
         bill.textArea.setText(bill.textArea.getText() + "\t\tCashier\n");
-        jTable1.setModel(new DefaultTableModel(null,new String[]{"item","Qty.","price"}));
+        jTable1.setModel(new DefaultTableModel(null, new String[]{"item", "Qty.", "price"}));
     }//GEN-LAST:event_payButtonActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
 
         // Add item to Cart here
-//        String NameItem = jTextPane1.getText();
         int numRow = jTable1.getRowCount();
 
         if (item > 0) {
@@ -418,7 +413,6 @@ public class PT extends javax.swing.JFrame {
 
             System.out.println("C : " + IsSameValue);
             if (IsSameValue == 0) {
-                //System.out.println("C : " + c);
 
                 AddRowToJTable(new Object[]{
                     jTable2.getModel().getValueAt(selected, 0),
@@ -429,13 +423,9 @@ public class PT extends javax.swing.JFrame {
                 );
             } else if (IsSameValue > 0) {
                 System.out.println("get_i : " + get_i);
-                //for (int i = 0; i < get_i; i++) {
                 System.out.println("loop get_i : " + get_i);
                 if (jTable2.getModel().getValueAt(selected, 0) == jTable1.getModel().getValueAt(get_i, 0)) {
                     System.out.println("xxx");
-
-                    //numJT2+ numJT1
-                    //priceJT2+ priceJT!
                     int numJT2 = Integer.valueOf(lb.getText().toString());
                     double priceJT2 = Double.valueOf(jTable2.getValueAt(selected, 1).toString());
                     double SpJT2 = Double.valueOf(numJT2) * priceJT2;
@@ -447,7 +437,6 @@ public class PT extends javax.swing.JFrame {
 
                     int numJT1 = Integer.valueOf(jTable1.getValueAt(get_i, 1).toString());
                     double priceJT1 = Double.valueOf(jTable1.getValueAt(get_i, 2).toString());
-                    //int SpJT2 = Integer.valueOf(jTable1.getValueAt(i, 2).toString());
 
                     System.out.println("numJT1 : " + numJT1);
                     System.out.println("priceJT1 : " + priceJT1);
@@ -463,15 +452,6 @@ public class PT extends javax.swing.JFrame {
                     jTable1.setValueAt(jTable2.getModel().getValueAt(selected, 0), get_i, 0);
                     jTable1.setValueAt(dfQtyJT1, get_i, 1);
                     jTable1.setValueAt(dfPriceJT1, get_i, 2);
-//                    numJT1 = 0;
-//                    numJT2 = 0;
-//                    SpJT2 = 0;
-//                    priceJT1 = 0;
-//                    priceJT2 = 0;
-//                    dfPriceJT1 = 0;
-//                    dfQtyJT1 = 0;
-
-//                    
                 }
 
             }
@@ -485,7 +465,6 @@ public class PT extends javax.swing.JFrame {
         item = 0;
         lb.setText("0");
 
-//        JOptionPane.showMessageDialog(null, "Payment successful! ");
         //Show Total price on label
         int NumRow = jTable1.getRowCount();
         double Total = 0;
@@ -521,11 +500,6 @@ public class PT extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_deleteActionPerformed
-
-
-
-
-
 
     /**
      * @param args the comme { double Total = 0; for (int i = 0; i < NumRow;

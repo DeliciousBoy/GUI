@@ -3,14 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ShoppingMenu;
+
 import java.awt.Toolkit;
 
 /**
  *
  * @author Gide
  */
-
-
 public class Bill extends javax.swing.JFrame {
 
     /**
@@ -20,9 +19,11 @@ public class Bill extends javax.swing.JFrame {
         initComponents();
         SetIcon();
     }
-      private void SetIcon() {
+
+    private void SetIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons8-card-payment-30.png")));
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,11 +62,7 @@ public class Bill extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public void drawBill(){
-       PT pt = new PT();
-      
-    
-    }
+
     /**
      * @param args the command line arguments
      */
@@ -97,11 +94,8 @@ public class Bill extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Bill g = new Bill();
-                g.show();
-                g.drawBill();
                 new Bill().setVisible(true);
-                
+
             }
         });
     }
